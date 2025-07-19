@@ -17,6 +17,19 @@ Motivation
 
 
 
+Strategy
+--------
+
+* Apply visual similarity detection that produces greyscale output based on
+  how similar a frame is to the previous one.
+  * Needs to be somewhat resistant against flickering introduced by the
+    codec in what should have been solid color.
+* Scale that video down to a single pixel for averaging.
+* Now brightness should indicate similarity of consecutive frames.
+* Detect start and end times of bright sections.
+
+
+
 Usage
 -----
 
