@@ -1,0 +1,22 @@
+{ "name": "ffmpeg-freeze-detector",
+  "version": "0.0.0",
+  "description": "Research project for how to detect (semi-)freezes in videos.",
+  "keywords": [],
+
+  "author": "M.K. (https://github.com/mk-pmb)",
+  "homepage": "https://github.com/mk-pmb/ffmpeg-freeze-detector/#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mk-pmb/ffmpeg-freeze-detector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mk-pmb/ffmpeg-freeze-detector/issues"
+  },
+  "contributors": [],
+
+  "private": true, "license": "ISC",
+
+
+
+  "engines": { "npm": ">=7.0.0", "bash": ">=5.0.0", "ffmpeg": ">=4.2.7" }
+}
