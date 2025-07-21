@@ -8,15 +8,16 @@ function frame_num_to_hhmmss () {
     echo W: "Expected frame rate to be in range 1..100 fps!" >&2
   [ -n "$FRAME_NUM_RGX" ] || local FRAME_NUM_RGX='^[ \t]*([0-9]+)[ \t]'
   local SEC_PER_DAY=86400
+  local MINUS="${FIRST_FRAME_NUM:-1}"
   local LN= VAL='bad_fps' MSEC=0 SEC=0
   while IFS= read -r LN; do
-    if [[ ! "$LN" =~ $FRAME_NUM_RGX ]]; then
-      echo "? $LN"
+    if ! [[ "$LN" =~ $FRAME_NUM_RGX ]]; then
+      echo "$LN"
       continue
     fi
     if [ -n "$FPS" ]; then
       VAL="${BASH_REMATCH[1]}"
-      (( MSEC = ( ( VAL - 1 ) * 1000 ) / FPS ))
+      (( MSEC = ( ( VAL - MINUS ) * 1000 ) / FPS ))
       printf -v MSEC -- '%04d' "$MSEC"
       SEC="${MSEC%???}"
       MSEC="${MSEC:${#SEC}}"

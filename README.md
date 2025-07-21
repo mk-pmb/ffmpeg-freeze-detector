@@ -52,6 +52,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAADBQgQGSAnKy0uLCghHBYRCQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+$ <tmp.sam.vfr ./src/vfr_to_hhmmss_barchart.sh --durations | head
+# timestamp     pixel_heat      thermometer     frames  duration
+00:00:00.000    0       [____________________]  129     00:00:05.160
+00:00:05.160    204     [####################]  1       00:00:00.040
+00:00:05.200    0       [____________________]  61      00:00:02.440
+00:00:07.640    3       [#:__________________]  1       00:00:00.040
+00:00:07.680    5       [##:_________________]  1       00:00:00.040
+00:00:07.720    8       [####________________]  1       00:00:00.040
+00:00:07.760    16      [########____________]  1       00:00:00.040
+00:00:07.800    25      [############:_______]  1       00:00:00.040
+00:00:07.840    32      [################____]  1       00:00:00.040
 ```
 
 
