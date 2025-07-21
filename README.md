@@ -37,8 +37,15 @@ Usage
 $ ./test/fixtures/download_fixtures.sh
 D: fixture: synth-a-modeler.mp4: have.
 
-$ ./src/scan_video_file.sh test/fixtures/synth-a-modeler.mp4 tmp.sam.vfr
-D: Scan video file: tmp.sam.vfr <- test/fixtures/synth-a-modeler.mp4
+$ VIDEO='test/fixtures/synth-a-modeler.mp4'
+
+$ ./src/scan_video_file.sh "$VIDEO" tmp.sam.vfr
+D: Scan video file: tmp.sam.vfr <- test/fixtures/synth-a-modeler.mp4 @ 25 fps
+D: Done, took 8 seconds (00:00:08), 3441 bytes.
+
+$ ./src/scan_video_file.sh --progress "$VIDEO" tmp.sam.vfr
+D: Scan video file: tmp.sam.vfr <- test/fixtures/synth-a-modeler.mp4 @ 25 fps
+1.49MiB 0:00:06 [ 247KiB/s] [============================================>] 100%
 D: Done, took 8 seconds (00:00:08), 3441 bytes.
 
 $ head -- tmp.sam.vfr
