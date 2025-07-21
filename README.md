@@ -82,6 +82,18 @@ Known issues
 
 * Needs more/better tests and docs.
 
+* Pixel heat detection seems to have a much too high minimum threshold.
+  In some gaming streams, the streamer can switch the tool held in their
+  hand ingame, can eat ingame food, and have stream alerts pop up,
+  and yet still, no pixel activity is detected whatsoever.
+  Unfortunately I don't have a free license on those example clips.
+  * While ignoring the popup alerts is indeed helpful for detecting
+    the streamer's absence or inactivity,
+    I'd still prefer a configurable threshold for that,
+    because maybe I want to know about some of the alerts.
+  * This might be comparable to trying to detect the slow headline movement
+    in the first few seconds of the `synth-a-modeler` test fixture.
+
 
 
 
