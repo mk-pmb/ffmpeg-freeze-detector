@@ -33,7 +33,27 @@ Strategy
 Usage
 -----
 
-:TODO:
+```text
+$ ./test/fixtures/download_fixtures.sh
+D: fixture: synth-a-modeler.mp4: have.
+
+$ ./src/scan_video_file.sh test/fixtures/synth-a-modeler.mp4 tmp.sam.vfr
+D: Scan video file: tmp.sam.vfr <- test/fixtures/synth-a-modeler.mp4
+D: Done, took 8 seconds (00:00:08), 3441 bytes.
+
+$ head -- tmp.sam.vfr
+fmt:ffmpeg-freeze-detector
+ver:250720.0
+fps:25
+enc:base64
+:
+
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAADBQgQGSAnKy0uLCghHBYRCQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+```
+
 
 
 
